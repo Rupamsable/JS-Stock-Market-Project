@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Stock.css">
+</head>
+<body>
+    <div class="container">
+        <header><h1> Stock Market Analysis </h1></header>
+
+        <section id="contentWrapper">
+            <div id="leftContainer">
+                <div id="chartInfo">
+                    <canvas id="myChart"></canvas>
+                    <div class="chart-Filters" onclick="chartFiltersClickHandler(event)">
+                        <button class="date-filter-btn" data-id="1mo">1 month</button>
+                        <button class="date-filter-btn" data-id="3mo">3 months</button>
+                        <button class="date-filter-btn" data-id="1y">1 year</button>
+                        <button class="date-filter-btn" data-id="5y">5 year</button>
+                    </div>
+                </div>
+            <div id="selectedStockWrapper" style="margin-top: 50px"></div>
+            <div id="SummaryInfo">SUMMARY INFO </div>
+            </div>
+            <div id="rightContainer">
+            <!-- <div class="stock-stat">
+                <button>AAPL</button>
+                <span>$3.953</span>
+                <span class="profit">0.24%</span>
+            </div> -->
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        var selectedStock = "AAPL";
+    </script>
+    <script src="./SelectedStock.js"></script>
+    <script type="module" src="./Stock.js"></script>
+    <script src="./helper.js"></script>
+    <!-- <script src="./StockConst.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</body>
+</html>
+
+
